@@ -1,0 +1,29 @@
+<p>
+    {{ stringInterpolation}}
+</p>
+<hr>
+<p>
+    {{ numberInterpolation}}
+</p>
+
+<hr>
+<h1>Property Binding</h1>
+
+<input type="text" [value]="stringInterpolation">
+
+<p [ngClass]="{red: isRed}">
+    Is this styled?
+</p>
+
+<button (click)="onTest()" type="button" class="btn btn-danger">Toggle Red</button>
+
+<hr><hr>
+<h1>Custom Property Binding</h1>
+<app-property-binding [result]="10"></app-property-binding>
+
+<hr><hr>
+<h1>{{ eventBind }}</h1>
+
+<app-event-binding (clicked)="onClicked($event)"></app-event-binding>
+
+<app-two-way-binding></app-two-way-binding>
